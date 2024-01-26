@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="volodymyr"
+FROM python:alpine
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY .. .
+
+CMD [ "python", "main.py" ]
